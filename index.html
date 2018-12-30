@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <style>
+      :root {
+        --background-color: #000;
+        --v-default: #dddedf;
+        --v-default-text: rgba(0, 0, 0, 0.67);
+        --v-primary: #0000a0;
+        --v-primary-text: #fff;
+        --v-secondary: #40bfa3;
+        --v-secondary-text: #0000a0;
+
+        --v-muted: #d3d4d7;
+        --v-muted-text: rgba(0, 0, 0, 0.36);
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+
+        background-color: #eee;
+        font-family: Segoe UI;
+        font-size: 16px;
+      }
+
+      .grid {
+        display: flex;
+        flex-direction: row;
+        margin: 0 -16px;
+      }
+
+      .item {
+        flex: 1;
+        padding: 0 16px;
+
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="module" src="./v-button.js"></script>
+    <script type="module" src="./v-checkbox.js"></script>
+    <script type="module" src="./v-navbar.js"></script>
+    <script type="module" src="./v-panel.js"></script>
+
+    <v-navbar color="primary"> IMPLEMENTATION </v-navbar>
+
+    <div style="margin: 0 40px">
+      <h1>Implementation</h1>
+      <div class="grid">
+        <v-panel variant="contained" class="item">
+          <h3 style="margin: 0; padding: 0; ">Lorem</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+            turpis a eros mattis tincidunt ut ac mauris. Etiam non dui euismod,
+            rhoncus nisi vitae, auctor purus.
+          </p>
+
+          <v-button> Read more </v-button>
+        </v-panel>
+
+        <v-panel color="primary" variant="contained" class="item">
+          <h3 style="margin: 0; padding: 0; ">We are Ipsum</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+            turpis a eros mattis tincidunt ut ac mauris. Etiam non dui euismod,
+            rhoncus nisi vitae, auctor purus.
+          </p>
+
+          <v-button color="secondary"> Read less </v-button>
+        </v-panel>
+
+        <v-panel color="secondary" variant="contained" class="item">
+          <h3 style="margin: 0; padding: 0; ">What we're not Dipsum...</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+            turpis a eros mattis tincidunt ut ac mauris. Etiam non dui euismod,
+            rhoncus nisi vitae, auctor purus.
+          </p>
+
+          <v-button color="primary"> Read more </v-button>
+        </v-panel>
+
+        <v-panel color="muted" variant="contained" class="item">
+          <h3 style="margin: 0; padding: 0; ">Who are we?</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+            turpis a eros mattis tincidunt ut ac mauris. Etiam non dui euismod,
+            rhoncus nisi vitae, auctor purus.
+          </p>
+
+          <v-button disabled="true"> Read more </v-button>
+        </v-panel>
+      </div>
+
+      <div class="grid" style="margin-top: 40px;">
+        <v-panel variant="contained" class="item">
+          <h3 style="margin: 0; padding: 0; ">Adipiscing</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+            turpis a eros mattis tincidunt ut ac mauris. Etiam non dui euismod,
+            rhoncus nisi vitae, auctor purus.
+          </p>
+
+          <v-button variant="outlined"> Read more </v-button>
+        </v-panel>
+
+        <v-panel color="primary" variant="contained" class="item">
+          <h3 style="margin: 0; padding: 0; ">We are Consectetur</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+            turpis a eros mattis tincidunt ut ac mauris. Etiam non dui euismod,
+            rhoncus nisi vitae, auctor purus.
+          </p>
+
+          <v-button color="secondary"> Read less </v-button>
+        </v-panel>
+
+        <v-panel color="secondary" variant="contained" class="item">
+          <h3 style="margin: 0; padding: 0; ">Vidi</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+            turpis a eros mattis tincidunt ut ac mauris. Etiam non dui euismod,
+            rhoncus nisi vitae, auctor purus.
+          </p>
+
+          <v-button color="default" variant="outlined">
+            Read more
+          </v-button>
+        </v-panel>
+
+        <v-panel
+          color="default"
+          spacing="none"
+          variant="contained"
+          class="item"
+        >
+          <h3 style="margin: 0; padding: 0; ">Who are we?</h3>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a
+            turpis a eros mattis tincidunt ut ac mauris. Etiam non dui euismod,
+            rhoncus nisi vitae, auctor purus.
+          </p>
+
+          <v-button> Read more </v-button>
+        </v-panel>
+      </div>
+    </div>
+  </body>
+</html>

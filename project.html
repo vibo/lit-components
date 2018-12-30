@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      :root {
+        --background-color: #000;
+        --v-default: #dddedf;
+        --v-default-text: rgba(0, 0, 0, 0.67);
+        --v-primary: #0000a0;
+        --v-primary-text: #fff;
+        --v-secondary: #40bfa3;
+        --v-secondary-text: #0000a0;
+
+        --v-muted: #d3d4d7;
+        --v-muted-text: rgba(0, 0, 0, 0.36);
+      }
+
+      body {
+        margin: 0;
+        padding: 102px 40px 40px;
+
+        background-color: #eee;
+        color: rgba(0, 0, 0, 0.87);
+        font-family: Segoe UI;
+        font-size: 16px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: Segoe UI;
+        margin: 0;
+        padding: 0;
+      }
+
+      .grid {
+        display: flex;
+        flex-direction: row;
+        margin: 0 -12px;
+      }
+
+      .item {
+        flex: 1;
+        padding: 0 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="module" src="./v-button.js"></script>
+    <script type="module" src="./v-checkbox.js"></script>
+    <script type="module" src="./v-navbar.js"></script>
+    <script type="module" src="./v-panel.js"></script>
+    <script type="module" src="./v-typography.js"></script>
+
+    <div>
+      <v-navbar color="primary"><span style="color: #FFF">Test</span></v-navbar>
+
+      <v-typography variant="h1">Test API</v-typography>
+
+      <h2>Stuff to eat</h2>
+
+      <p>
+        The grand of the spine is a certain fruit that does not attack cats.
+        Football no good clock to watch in the evening of bread. Other potatoes
+        will come along as the wise say. But potato doesn't grow on trees.
+        Bushes are other animals to speak of.
+      </p>
+
+      <p>
+        The grand of the spine is a certain fruit that does not attack cats.
+        Football no good clock to watch in the evening of bread. Other potatoes
+        will come along as the wise say. But potato doesn't grow on trees.
+        Bushes are other animals to speak of.
+      </p>
+
+      <div class="grid">
+        <v-panel variant="contained" class="item">
+          <h3>Components</h3>
+
+          <p>Reusable web components</p>
+
+          <v-button color="primary">Read more</v-button>
+        </v-panel>
+
+        <v-panel variant="contained" color="secondary" class="item">
+          <h3>Styleguide</h3>
+
+          <p>Styleguide information.</p>
+
+          <v-button color="primary">Read more</v-button>
+        </v-panel>
+
+        <v-panel color="primary" variant="contained" class="item">
+          <h3>Framework implementation</h3>
+
+          <p>Implement with React, Angular, angularJS and Vue.</p>
+
+          <v-button color="secondary">Read more</v-button>
+        </v-panel>
+      </div>
+    </div>
+  </body>
+</html>

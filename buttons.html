@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <style>
+      :root {
+        --background-color: #000;
+      }
+
+      body {
+        margin: 0;
+        padding: 64px 40px 0;
+
+        background-color: #eee;
+        font-family: Segoe UI;
+        font-size: 16px;
+      }
+
+      .sub-section {
+        padding-bottom: 40px;
+      }
+
+      .code {
+        padding: 20px 24px;
+
+        background-color: #f4f5f9;
+        white-space: pre-line;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="module" src="./v-button.js"></script>
+    <script type="module" src="./v-checkbox.js"></script>
+    <script type="module" src="./v-panel.js"></script>
+
+    <section>
+      <header><h2>Buttons</h2></header>
+
+      <div class="sub-section">
+        <h3>Colors</h3>
+
+        <v-button>Normal</v-button>
+        <v-button color="primary">Primary</v-button>
+        <v-button color="secondary">Secondary</v-button>
+        <v-button disabled="true">Disabled</v-button>
+      </div>
+
+      <div class="sub-section">
+        <h3>Override</h3>
+
+        <v-button variant="primary" style="--v-primary: red"
+          >Override primary</v-button
+        >
+      </div>
+
+      <div class="sub-section">
+        <h3>Sizes</h3>
+
+        <v-button size="small" variant="primary">Small</v-button>
+        <v-button size="medium" variant="primary">Medium</v-button>
+        <v-button size="large" variant="primary">Large</v-button>
+      </div>
+
+      <div class="sub-section">
+        <h3>Variants</h3>
+
+        <div class="sub-section">
+          <v-button variant="contained">Contained default</v-button>
+          <v-button variant="outlined">Outlined default</v-button>
+          <v-button variant="text">Text default</v-button>
+        </div>
+
+        <div class="sub-section">
+          <v-button color="primary" variant="contained"
+            >Contained primary</v-button
+          >
+          <v-button color="primary" variant="outlined"
+            >Outlined primary</v-button
+          >
+          <v-button color="primary" variant="text"
+            >Text primary</v-button
+          >
+        </div>
+
+        <div class="sub-section">
+          <v-button color="secondary" variant="contained"
+            >Contained secondary</v-button
+          >
+          <v-button color="secondary" variant="outlined"
+            >Outlined secondary</v-button
+          >
+          <v-button color="secondary" variant="text"
+            >Text secondary</v-button
+          >
+        </div>
+
+        <div class="sub-section">
+          <v-button variant="contained" disabled="true"
+            >Contained disabled</v-button
+          >
+          <v-button variant="outlined" disabled="true"
+            >Outlined disabled</v-button
+          >
+          <v-button color="secondary" variant="text" disabled="true"
+            >Text disabled</v-button
+          >
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <h3>Variables</h3>
+
+        <pre class="code">
+          # Global colors
+
+          --v-default
+          --v-default-text
+          --v-primary
+          --v-primary-text
+          --v-secondary
+          --v-secondary-text
+          --v-muted
+          --v-muted-text
+
+
+          # Specific
+
+          --v-button-border-radius
+        </pre>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <style>
+      :root {
+        --background-color: #000;
+        --v-default: #dddedf;
+        --v-default-text: rgba(0, 0, 0, 0.67);
+        --v-primary: #0000a0;
+        --v-primary-text: #fff;
+        --v-secondary: #40bfa3;
+        --v-secondary-text: #0000a0;
+
+        --v-muted: #d3d4d7;
+        --v-muted-text: rgba(0, 0, 0, 0.36);
+      }
+
+      body {
+        margin: 0;
+        padding: 64px 40px 0;
+
+        background-color: #eee;
+        font-family: Segoe UI;
+        font-size: 16px;
+      }
+
+      .sub-section {
+        padding-bottom: 40px;
+      }
+
+      .code {
+        padding: 20px 24px;
+
+        background-color: #f4f5f9;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="module" src="./v-panel.js"></script>
+    <script type="module" src="./v-checkbox.js"></script>
+    <script type="module" src="./v-panel.js"></script>
+
+    <section>
+      <header><h2>Panels</h2></header>
+
+      <div class="sub-section">
+        <h3>Colors</h3>
+
+        <v-panel>Normal</v-panel>
+        <v-panel color="muted">Muted</v-panel>
+        <v-panel color="primary">Primary</v-panel>
+        <v-panel color="secondary">Secondary</v-panel>
+      </div>
+
+      <div class="sub-section">
+        <h3>Override</h3>
+
+        <v-panel variant="primary" style="--v-primary: red"
+          >Override primary</v-panel
+        >
+      </div>
+
+      <div class="sub-section">
+        <h3>Spacing</h3>
+
+        <v-panel spacing="none" variant="primary">None</v-panel>
+        <v-panel spacing="small" variant="primary">Small</v-panel>
+        <v-panel spacing="medium" variant="primary">Medium</v-panel>
+        <v-panel spacing="large" variant="primary">Large</v-panel>
+      </div>
+
+      <div class="sub-section">
+        <h3>Variants</h3>
+
+        <div class="sub-section">
+          <v-panel variant="contained">Contained default</v-panel>
+          <v-panel>None default</v-panel>
+        </div>
+
+        <div class="sub-section">
+          <v-panel color="primary" variant="contained"
+            >Contained primary</v-panel
+          >
+          <v-panel color="primary">None primary</v-panel>
+        </div>
+
+        <div class="sub-section">
+          <v-panel color="secondary" variant="contained"
+            >Contained secondary</v-panel
+          >
+          <v-panel color="secondary">None secondary</v-panel>
+        </div>
+      </div>
+
+      <div class="sub-section">
+        <h3>Variables</h3>
+
+        <pre class="code">
+# Global colors
+
+--v-default
+--v-default-text
+--v-primary
+--v-primary-text
+--v-secondary
+--v-secondary-text
+--v-muted
+--v-muted-text
+
+
+# Specific
+
+--v-panel-border-radius
+        </pre>
+      </div>
+
+      <div class="sub-section">
+        <h3>Usage</h3>
+
+        <xmp class="code"><v-panel
+  color="default | inherit | muted | primary | secondary"
+  spacing="none | small | medium | large"
+  variant="none | contained"
+>
+  Content...
+</v-panel>
+</xmp>
+      </div>
+    </section>
+  </body>
+</html>
